@@ -6,13 +6,12 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use phpDocumentor\Reflection\Types\This;
 
-class Email extends Mailable
+class TestMarkdownMail extends Mailable
 {
     use Queueable, SerializesModels;
-
     public $contenuMail;
+    public $url = 'http://127.0.0.1:8000/';
     /**
      * Create a new message instance.
      *
@@ -30,9 +29,6 @@ class Email extends Mailable
      */
     public function build()
     {
-        // return $this->view('email');
-        return $this->from('adilmohamedmohamed97@gmail.com')
-                    ->subject('TestObjet')
-                    ->view('email');
+        return $this->markdown('emails.markdown-test');
     }
 }

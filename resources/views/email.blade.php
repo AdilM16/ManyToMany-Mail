@@ -8,10 +8,10 @@
 </head>
 <body>
     
-    <p>{{  $contenuEmail["name"]  }}</p>
-    <p>{{  $contenuEmail["email"]  }}</p>
-    <p>{{  $contenuEmail["subject"]  }}</p>
-    <p>{{  $contenuEmail["message"]  }}</p>
+    <p>{{  $contenuMail["name"]  }}</p>
+    <p>{{  $contenuMail["email"]  }}</p>
+    <p>{{  $contenuMail["phone"]  }}</p>
+    <p>{{  $contenuMail["message"]  }}</p>
 
 </body>
 </html>

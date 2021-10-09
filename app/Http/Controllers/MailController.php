@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\Email;
+use App\Mail\TestMarkdownMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -15,7 +16,8 @@ class MailController extends Controller
             'phone' => $request->phone,
             'message' => $request->message,
         ];
-        Mail::to('adilmohamedmohamed97@gmail.com')->send(new Email($contenuMail));
+        Mail::to('adilmohamedmohamed97@gmail.com')->send(new TestMarkdownMail($contenuMail
+    ));
 
         return back()->with('message envoyé');
     }
